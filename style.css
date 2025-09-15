@@ -1,0 +1,17 @@
+/* styles.css */
+
+.hero {
+background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1650&q=80') center/cover no-repeat;
+height: 70vh;
+}
+.card img {
+object-fit: cover;
+height: 180px;
+}
+
+.bg-grey {
+  background-color: #e9e8e8; /* Coral */
+  color: black;
+ 
+}
+

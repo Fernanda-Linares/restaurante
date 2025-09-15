@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-------------Bootstrap--------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!----------Iconos Bootstrap-------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-------------------------Barra de navegacion------------------------------->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">El Restaurant</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#menu-section">Menú</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <header id="home" class="hero text-white text-center d-flex align-items-center">
+      <div class="container">
+        <h1 class="display-4">Bienvenidos</h1>
+        <p class="lead">Sabores auténticos y frescos</p>
+      <!-- Botón que abre modal de reservas -->
+        <button class="btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#modalReserva">Reserva ahora</button>
+      </div>
+    </header>
+
+
+    <!-- Menú -->
+    <section id="menu-section" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Nuestro Menú</h2>
+        <div class="row g-4">
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100">
+             <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=300&h=180&q=80" class="card-img-top" alt="Plato extra 1">
+              <div class="card-body">
+                <h5 class="card-title">Risotto de Mariscos</h5>
+                <p class="card-text">Arroz cremoso preparado lentamente con caldo de mariscos, acompañado de camarones, mejillones y calamares frescos, terminado con un toque de vino blanco y perejil.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&h=250&q=80" class="card-img-top" alt="Plato real 2">
+              <div class="card-body">
+                <h5 class="card-title">Lomo a la Parrilla</h5>
+                <p class="card-text">Jugoso corte de vacuno a la parrilla, sazonado con hierbas aromáticas, acompañado de papas rústicas doradas y vegetales salteados.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&h=250&q=80" class="card-img-top" alt="Plato real 3">
+              <div class="card-body">
+                <h5 class="card-title">Ensalada Mediterránea</h5>
+                <p class="card-text">Mezcla fresca de lechugas, tomates cherry, aceitunas negras y queso feta, aderezada con aceite de oliva y limón.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Modal de Reserva -->
+    <div class="modal fade" id="modalReserva" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-dark">
+            <h5 class="modal-title bg-dark text-white" >Reserva tu mesa</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body bg-grey">
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Correo</label>
+                <input type="email" class="form-control" required>
+              </div>
+              <div class="row g-2 mb-3">
+                <div class="col">
+                  <label class="form-label">Fecha</label>
+                  <input type="date" class="form-control" required>
+                </div>
+                <div class="col">
+                  <label class="form-label">Hora</label>
+                  <input type="time" class="form-control" required>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Personas</label>
+                <select class="form-select" required>
+                  <option value="1">1</option>
+                  <option value="2" selected>2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5+</option>
+                </select>
+              </div>
+             <button type="submit" class="btn btn-dark w-100">Confirmar Reserva</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- Footer -->
+    <footer id="contacto" class="bg-light text-dark text-center py-4">
+      <p class="mb-1">&copy; 2025 El Restaurant</p>
+      <div>
+        <a href="#" class="text-dark me-3"><i class="bi bi-facebook" style="font-size:1.5rem"></i></a>
+        <a href="#" class="text-dark"><i class="bi bi-instagram" style="font-size:1.5rem"></i></a>
+      </div>
+    </footer>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>  
+  </body>
+
+</html>
